@@ -1,8 +1,8 @@
 import './App.css';
 
-const lakeList = ["Lake 1", "Lake 2", "Lake 3"];
+export const lakeList = ["Lake 1", "Lake 2", "Lake 3"];
 
-const List = (props) => {
+const App = (props) => {
   return (
     <>
      <ul>
@@ -16,10 +16,10 @@ const List = (props) => {
   );
 }
 
-const App = () => {
-  return (
-     <List lakes={lakeList} />
-  );
-}
+// const App = () => {
+//   return (
+//      <List lakes={lakeList} />
+//   );
+// }
 
 export default App;
