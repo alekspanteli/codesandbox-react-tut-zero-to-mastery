@@ -1,19 +1,31 @@
 import './App.css';
 
-export const list = [1, 2, 3, 4, 5];
 
-const App = ({items}) => {
+const Lake = ({name}) => {
   return (
     <>
-     <ul>
-         {
-             items.map((item, i) => (
-                 <li key={i}>{item}</li>
-             ))
-         }
-    </ul>
+     <h1>Visit {name}</h1>
     </>
   );
+}
+
+const SkiResort = ({name}) => {
+  return (
+    <>
+     <h1>Visit {name}</h1>
+    </>
+  );
+}
+
+
+const App = (props) => {
+    return (
+        <>
+         {
+             props.season === "summer" ? ( <Lake name="Lake" /> ) : ( <SkiResort name="Resort" /> )
+         }
+        </>
+    );
 }
 
 export default App;
