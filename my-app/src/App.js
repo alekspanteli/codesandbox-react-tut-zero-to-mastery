@@ -1,18 +1,20 @@
 import './App.css';
 
-const Hello = ({library, message, number}) => {
+const Lake = ({name}) => {
   return (
     <>
-    <h1>Welcome to {library}!</h1>
-    <p>{message}</p>
-    <p>{number} Props total</p>
+    <h1>{name}</h1>
     </>
   );
 }
 
-function App() {
+const App = () => {
   return (
-    <Hello library="React" message="Have fun!" number={3} />
+    <>
+    <Lake name="Lake number 1" />
+    <Lake name="Lake number 2" />
+    <Lake name="Lake number 3" />
+    </>
   );
 }
 
