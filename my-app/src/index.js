@@ -7,6 +7,6 @@ import App from './App';
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <App season="summer" />
+    <App season="winter" />
   </React.StrictMode>
 );
