@@ -1,20 +1,24 @@
 import './App.css';
 
-const Lake = ({name}) => {
+const lakeList = ["Lake 1", "Lake 2", "Lake 3"];
+
+const List = (props) => {
   return (
     <>
-    <h1>{name}</h1>
+     <ul>
+       {
+         props.lakes.map(lake => (
+           <li>{lake}</li>
+         ))
+       }
+    </ul>
     </>
   );
 }
 
 const App = () => {
   return (
-    <>
-    <Lake name="Lake number 1" />
-    <Lake name="Lake number 2" />
-    <Lake name="Lake number 3" />
-    </>
+     <List lakes={lakeList} />
   );
 }
 
