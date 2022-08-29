@@ -1,25 +1,22 @@
 import './App.css';
 
-export const lakeList = ["Lake 1", "Lake 2", "Lake 3"];
+export const lakeList = [
+    {id: "1", name: "Lake 1", city: "Ayia Napa"},
+    {id: "2", name: "Lake 2", city: "Limassol"},
+    {id: "3", name: "Lake 3", city: "Larnaca"}
+];
 
-const App = (props) => {
+const App = ({lakes}) => {
   return (
     <>
-     <ul>
-       {
-         props.lakes.map(lake => (
-           <li>{lake}</li>
-         ))
-       }
-    </ul>
+     {
+         lakes.map(lake => <div>
+             <h2>{lake.name}</h2>
+             <p>{lake.city}</p>
+             </div>)
+     }
     </>
   );
 }
-
-// const App = () => {
-//   return (
-//      <List lakes={lakeList} />
-//   );
-// }
 
 export default App;
