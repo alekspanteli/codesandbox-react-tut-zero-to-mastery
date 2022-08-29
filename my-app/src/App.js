@@ -1,15 +1,18 @@
 import './App.css';
 
-let city = {
-    name: "Madrid",
-    country: "Spain"
+const Hello = ({library, message, number}) => {
+  return (
+    <>
+    <h1>Welcome to {library}!</h1>
+    <p>{message}</p>
+    <p>{number} Props total</p>
+    </>
+  );
 }
 
 function App() {
   return (
-    <h1>
-        {city.name} is sin {city.country}
-    </h1>
+    <Hello library="React" message="Have fun!" number={3} />
   );
 }
 
