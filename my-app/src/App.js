@@ -1,20 +1,17 @@
 import './App.css';
 
-export const lakeList = [
-    {id: "1", name: "Lake 1", city: "Ayia Napa"},
-    {id: "2", name: "Lake 2", city: "Limassol"},
-    {id: "3", name: "Lake 3", city: "Larnaca"}
-];
+export const list = [1, 2, 3, 4, 5];
 
-const App = ({lakes}) => {
+const App = ({items}) => {
   return (
     <>
-     {
-         lakes.map(lake => <div>
-             <h2>{lake.name}</h2>
-             <p>{lake.city}</p>
-             </div>)
-     }
+     <ul>
+         {
+             items.map((item, i) => (
+                 <li key={i}>{item}</li>
+             ))
+         }
+    </ul>
     </>
   );
 }

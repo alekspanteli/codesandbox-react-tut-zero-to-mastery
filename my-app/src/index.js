@@ -1,11 +1,11 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
-import App, {lakeList} from './App';
+import App, {list} from './App';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <App lakes={lakeList} />
+    <App items={list} />
   </React.StrictMode>
 );
