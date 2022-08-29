@@ -8,7 +8,7 @@ let city = {
 function App() {
   return (
     <h1>
-        {city.name} is in {city.country}
+        {city.name} is sin {city.country}
     </h1>
   );
 }
