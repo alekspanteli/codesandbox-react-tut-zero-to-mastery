@@ -2,20 +2,30 @@ import './App.css';
 import {useState, useEffect} from "react";
 
 
-const Checkbox = () => {
+const Test = () => {
     
-    const [checked, setChecked] = useState(true);
+    const [val, setVal] = useState("");
+    const [val2, setVal2] = useState("");
     
-    useEffect(() => {
-        alert(`checked ${checked.toString('')}`)
-    })
+    useEffect(() =>{
+        console.log(`field 1: ${val}`);
+    },[val])
     
-    
+    useEffect(() =>{
+        console.log(`field 2: ${val2}`);
+    },[val2])
     
     return (
         <>
-        <input onChange={() => setChecked(checked => !checked)} type="checkbox" value={checked} />
-        {checked ? "checked" : "not checked"}
+        <label>
+            Favourite Phrase:
+            <input value={val} onChange={e => setVal(e.target.value)} />
+        </label>
+        <br />
+         <label>
+            Second favourite Phrase:
+            <input value={val2} onChange={e => setVal2(e.target.value)} />
+        </label>
         </>
     );
 }
@@ -23,7 +33,7 @@ const Checkbox = () => {
 const App = () => {
     return (
         <>
-        <Checkbox />
+        <Test />
         </>
     );
 }
