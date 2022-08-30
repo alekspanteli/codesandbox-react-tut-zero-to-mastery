@@ -2,31 +2,33 @@ import './App.css';
 import {useState, useEffect} from "react";
 
 
+const GitHubUser = ({num}) => {
+    
+    const [data, setData] = useState(null);
+    useEffect(() => {
+        fetch(`https://jsonplaceholder.typicode.com/todos/${num}`)
+        .then(res => res.json())
+        .then(setData)
+        .catch(console.error)
+    })
+    
+    if(data){
+        return (
+        <>
+        {data.title}
+       </>
+        );
+    }
+    return null;
+
+    
+}
+
 const Test = () => {
-    
-    const [val, setVal] = useState("");
-    const [val2, setVal2] = useState("");
-    
-    useEffect(() =>{
-        console.log(`field 1: ${val}`);
-    },[val])
-    
-    useEffect(() =>{
-        console.log(`field 2: ${val2}`);
-    },[val2])
-    
     return (
         <>
-        <label>
-            Favourite Phrase:
-            <input value={val} onChange={e => setVal(e.target.value)} />
-        </label>
-        <br />
-         <label>
-            Second favourite Phrase:
-            <input value={val2} onChange={e => setVal2(e.target.value)} />
-        </label>
-        </>
+        <GitHubUser num="1"/>
+       </>
     );
 }
 
