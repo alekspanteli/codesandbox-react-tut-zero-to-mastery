@@ -1,18 +1,18 @@
 import './App.css';
 
 
-const Lake = ({name}) => {
+const Lake = () => {
   return (
     <>
-     <h1>Visit {name}</h1>
+     <h1>Visit Lake</h1>
     </>
   );
 }
 
-const SkiResort = ({name}) => {
+const SkiResort = () => {
   return (
     <>
-     <h1>Visit {name}</h1>
+     <h1>Visit SkiResort</h1>
     </>
   );
 }
@@ -20,15 +20,10 @@ const SkiResort = ({name}) => {
 
 const App = (props) => {
     return (
-        <>
-         {
-             props.season === "summer" ? 
-             ( <Lake name="Lake" /> )
-              :  props.season === "winter" ?
-             ( <SkiResort name="Resort" /> ) :
-             (<h1>Come back next time</h1>)
-         }
-        </>
+       <>
+       <Lake name="test" />
+       <SkiResort name="test2" />
+       </>
     );
 }
 
